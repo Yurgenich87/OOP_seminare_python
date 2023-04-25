@@ -1,11 +1,8 @@
-import json
-
-from HW_1.Product.Products import Product, BottleOfWater, HotDrink
-from HW_1.Product.VandingMashine import VendingMachine
-
-# item1 = Product("Cola", 88.0)
+# item1 = Classes("Cola", 88.0)
 # item1.set_price(98.0)
 # itemMachin.add_product(item1)
+from HW_1.VendingMachine.Product.Products import Product, BottleOfWater, HotDrink
+from HW_1.VendingMachine.VandingMashine import VendingMachine
 
 itemMachin = VendingMachine(300)
 itemMachin.add_product(Product("chips", 60))
