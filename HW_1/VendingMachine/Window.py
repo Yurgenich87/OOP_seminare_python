@@ -137,25 +137,6 @@ class Window:
         self.draw_widgets()
         self.root.mainloop()
 
-    def create_child(self, width, height, title="VendingMachine", resizable=(False, False), icon=None):
-        """Создание дочернего окна"""
-        ChildWindow(self.root, width, height, title, resizable, icon)
 
 
-class ChildWindow:
-    """Класс дочернего окна"""
 
-    def __init__(self, parent, width, height, title="Child", resizable=(False, False), icon=None):
-        self.root = Toplevel(parent)
-        self.root.title(title)
-        self.root.geometry(f"{width}x{height}+200+200")
-        self.root.resizable(resizable[0], resizable[1])
-        if icon:
-            self.root.iconbitmap(icon)
-
-        self.root.grab_set()
-
-    def grab_focus(self):
-        self.root.grab_set()
-        self.root.focus_set()
-        self.root.wait_window()

@@ -1,5 +1,4 @@
 from abc import abstractmethod
-
 from HW_1.SuperMarket.Classes.Clients import Actor
 
 
@@ -15,7 +14,6 @@ class ActorBehaviour(Actor):
     @abstractmethod
     def isMakeOrder(self) -> bool:
         pass
-
 
     @abstractmethod
     def isTakeOrder(self) -> bool:
