@@ -108,24 +108,6 @@ class Window:
                     mb.showerror("Ошибка", "Недостаточно денег")
                 break
 
-    def change_label(self):
-        self.label.configure(text="Оплачено", bg="#66FF99")
-
-    def show_parameters(self):
-        state = ("inactive", "active")
-        text = ""
-
-        for name, var in self.parameters:
-            text += f"{name} is {state[var.get()]}\n"
-        mb.showinfo("Parameters", text)
-
-    def check_bags(self):
-        text = ""
-        if self.cofe_var.get():
-            text += "Вы купили кофе"
-        else:
-            text += "Вы не купили кофе"
-
     def exit(self):
         """Определение параметров выхода"""
         choice = mb.askyesno("Выход", "Хотите выйти?")
